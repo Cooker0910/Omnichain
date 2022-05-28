@@ -118,6 +118,12 @@ module.exports = {
       chainId: 4002,
       accounts: accounts(),
     }
-  }
+  },
+  etherscan: {
+    apiKey: {
+       rinkeby: process.env.ETHERSCAN_API_KEY,
+       polygonMumbai: process.env.POLYGONSCAN_API_KEY
+    }
+ }
 
 };
