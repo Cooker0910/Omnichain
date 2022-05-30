@@ -82,7 +82,6 @@ module.exports = {
       chainId: 43114,
       accounts: accounts(),
     },
-
     rinkeby: {
       url: "https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161", // public infura endpoint
       chainId: 4,
@@ -99,7 +98,7 @@ module.exports = {
       accounts: accounts(),
     },
     mumbai: {
-      url: "https://rpc-mumbai.maticvigil.com/",
+      url: "https://matic-mumbai.chainstacklabs.com",
       chainId: 80001,
       accounts: [process.env.PRIVATE_KEY],
     },

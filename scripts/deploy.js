@@ -14,21 +14,18 @@ async function main () {
 
   let omniSticksContract;
 
-  switch(network) {
+  switch(networkName) {
     case 'rinkeby':
       omniSticksContract = await omniSticksFactory.deploy("Omni Sticks Testnet", "STICKS", LZ_ENDPOINTS.rinkeby, 0, 749);
       break
     case 'mumbai':
-      omniSticksContract = await omniSticksContract.deploy("Omni Sticks Testnet", "STICKS", LZ_ENDPOINTS.mumbai, 750, 1499);
+      omniSticksContract = await omniSticksFactory.deploy("Omni Sticks Testnet", "STICKS", LZ_ENDPOINTS.mumbai, 750, 1499);
       break
     default:
       console.log("that is not a valid network name");
   }
   console.log("Token address:", omniSticksContract.address);
 
-  await greeter.deployed();
-
-  console.log("Greeter deployed to:", greeter.address);
 }
 
 main()
